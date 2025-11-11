@@ -1,0 +1,59 @@
+{
+  "realm": "microservices-realm",
+  "enabled": true,
+  "registrationAllowed": true,
+  "rememberMe": true,
+  "clients": [
+    {
+      "clientId": "spring-cloud-gateway-client",
+      "name": "API Gateway",
+      "description": "Client for the API Gateway service SpringBoot application",
+      "publicClient": false,
+      "protocol": "openid-connect",
+      "secret": "Vl55zwUfF61R8qxZjqKlfgFzk8liz3Qr",
+
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": true,
+      "authorizationServicesEnabled": true,
+
+      "redirectUris": [
+        "http://localhost:8080/*"
+      ],
+      "baseUrl": "http://localhost:8080/",
+      "webOrigins": [
+        "*"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "testadmin",
+      "email": "testadmin@mail.com",
+      "enabled": true,
+      "firstName": "Test",
+      "lastName": "Admin",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin123",
+          "temporary": false
+        }
+      ]
+    },
+    {
+      "username": "testuser",
+      "email": "testuser@mail.com",
+      "enabled": true,
+      "firstName": "Test",
+      "lastName": "User",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "user123",
+          "temporary": false
+        }
+      ]
+    }
+  ]
+}
